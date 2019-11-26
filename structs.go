@@ -4,30 +4,30 @@ import (
 	"fmt"
 )
 
-type person struct {
+type Person struct {
 	name string
 	age  int
 }
 
 // NewPerson do
-func NewPerson(name string) *person {
-	p := person{name: name}
+func NewPerson(name string) *Person {
+	p := Person{name: name}
 	p.age = 42
 	return &p
 }
 
 func main() {
-	fmt.Println(person{"Bob", 20})
+	fmt.Println(Person{"Bob", 20})
 
-	fmt.Println(person{name: "Alice", age: 30})
+	fmt.Println(Person{name: "Alice", age: 30})
 
-	fmt.Println(person{name: "Fred"})
+	fmt.Println(Person{name: "Fred"})
 
-	fmt.Println(&person{name: "Ann", age: 40})
+	fmt.Println(&Person{name: "Ann", age: 40})
 
 	fmt.Println(NewPerson("Jon"))
 
-	s := person{name: "Sean", age: 50}
+	s := Person{name: "Sean", age: 50}
 	fmt.Println(s.name)
 
 	sp := &s
